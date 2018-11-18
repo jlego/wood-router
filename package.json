@@ -1,6 +1,6 @@
 {
   "name": "wood-router",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/jlego/wood-router/issues"
   },
-  "homepage": "https://github.com/jlego/wood-router#readme"
+  "homepage": "https://github.com/jlego/wood-router#readme",
+  "dependencies": {
+    "connect-multiparty": "^2.2.0"
+  }
 }
