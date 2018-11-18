@@ -1,5 +1,6 @@
 // 路由基类
 // by YuRonghui 2018-11-15
+const multipart = require('connect-multiparty');
 const router = require('express').Router();
 
 class Router {
@@ -18,6 +19,7 @@ class Router {
         fun = argus.pop(),
         methodArr = ['get', 'post', 'put', 'delete'];
       if(this.controllerName && this.controllers) fun = fun.bind(this.controllers.get(this.controllerName));
+      if(method === 'post') argus.unshift(multipart);
       if(methodArr.includes(method)) router[method](pathMatch, ...argus, fun);
     }
   }
