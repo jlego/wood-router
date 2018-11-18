@@ -18,7 +18,9 @@ class Router {
       let pathMatch = argus.shift(),
         fun = argus.pop(),
         methodArr = ['get', 'post', 'put', 'delete'];
-      if(this.controllerName && this.controllers) fun = fun.bind(this.controllers.get(this.controllerName));
+      if(this.controllerName && this.controllers && typeof fun === 'function'){
+        fun = fun.bind(this.controllers.get(this.controllerName));
+      }
       if(method === 'post') argus.unshift(multipart);
       if(methodArr.includes(method)) router[method](pathMatch, ...argus, fun);
     }
