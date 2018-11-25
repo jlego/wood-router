@@ -2,7 +2,6 @@
 // by YuRonghui 2018-11-15
 const multipart = require('connect-multiparty');
 const router = require('express').Router();
-const { Util } = require('wood-util')();
 
 class Router {
   constructor(controllerName, controllers) {
