@@ -21,6 +21,6 @@
   "homepage": "https://github.com/jlego/wood-router#readme",
   "dependencies": {
     "connect-multiparty": "^2.2.0",
-    "wood-util": "^1.0.6"
+    "wood-util": "^1.0.17"
   }
 }
